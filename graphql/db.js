@@ -18,3 +18,8 @@ export const people = [
     gender: "meow",
   },
 ];
+
+export const getById = id => {
+  const filteredPeople = people.filter(person => person.id === String(id));
+  return filteredPeople[0];
+};
