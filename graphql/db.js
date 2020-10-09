@@ -1,4 +1,4 @@
-export const movies = [
+const movies = [
   {
     id: "0",
     name: "Jason's horror movie",
