@@ -25,3 +25,15 @@ export const getById = id => {
   const filteredMovie = movies.filter(movie => movie.id === String(id));
   return filteredMovie[0];
 };
+
+export const getMovies = () => movies;
+
+export const deleteMovie = id => {
+  const otherMovies = movies.filter(movie => movie.id !== String(id));
+  if (movies.length > otherMovies.length) {
+    movies = otherMovies;
+    return true;
+  } else {
+    return false;
+  }
+};
