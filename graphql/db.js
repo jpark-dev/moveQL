@@ -1,35 +1,35 @@
-const movies = [
+let movies = [
   {
-    id: "0",
+    id: 0,
     name: "Jason's horror movie",
     score: 30,
   },
   {
-    id: "1",
+    id: 1,
     name: "Amy's cute movie",
     score: 80,
   },
   {
-    id: "2",
+    id: 2,
     name: "Linto's dog movie",
     score: 99,
   },
   {
-    id: "3",
+    id: 3,
     name: "Sujin's mom movie",
     score: 98,
   },
 ];
 
 export const getById = id => {
-  const filteredMovie = movies.filter(movie => movie.id === String(id));
+  const filteredMovie = movies.filter(movie => movie.id === id);
   return filteredMovie[0];
 };
 
 export const getMovies = () => movies;
 
 export const deleteMovie = id => {
-  const otherMovies = movies.filter(movie => movie.id !== String(id));
+  const otherMovies = movies.filter(movie => movie.id !== id);
   if (movies.length > otherMovies.length) {
     movies = otherMovies;
     return true;
@@ -40,7 +40,7 @@ export const deleteMovie = id => {
 
 export const addMovie = (name, score) => {
   const newMovie = {
-    id: `${movies.length + 1}`,
+    id: movies.length + 1,
     name,
     score,
   };

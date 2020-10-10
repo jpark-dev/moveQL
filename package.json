@@ -7,7 +7,8 @@
   "author": "Jason Park<zeipar.com>",
   "license": "MIT",
   "dependencies": {
-    "graphql-yoga": "^1.18.3"
+    "graphql-yoga": "^1.18.3",
+    "node-fetch": "^2.6.1"
   },
   "type": "module",
   "scripts": {
