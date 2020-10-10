@@ -1,4 +1,5 @@
-import { getMovies, getById, addMovie, deleteMovie } from "./db.js";
+import { getById, addMovie, deleteMovie } from "./db.js";
+import { getMovies } from "./externalAPI.js";
 
 const resolvers = {
   Query: {
