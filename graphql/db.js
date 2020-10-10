@@ -30,7 +30,6 @@ export const getMovies = () => movies;
 
 export const deleteMovie = id => {
   const otherMovies = movies.filter(movie => movie.id !== id);
-  console.log("movie", movies, "others", otherMovies);
   if (movies.length > otherMovies.length) {
     movies = otherMovies;
     return true;
