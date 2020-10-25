@@ -2,7 +2,7 @@ import axios from "axios";
 const BASE_URL = "https://yts.am/api/v2/";
 const LIST_MOVIES_URL = `${BASE_URL}list_movies.json?`;
 const MOVIE_DETAILS_URL = `${BASE_URL}movie_details.json`;
-cost MOVIE_SUGGESTIONS_URL = `${BASE_URL}movie_suggestions.json`;
+const MOVIE_SUGGESTIONS_URL = `${BASE_URL}movie_suggestions.json`;
 
 export const getMovies = async (limit, rating) => {
   let REQUEST_URL = LIST_MOVIES_URL;
@@ -35,12 +35,12 @@ export const getMovie = async id => {
 export const getSuggestions = async id => {
   const {
     data: {
-      data: {movies}
-    }
+      data: { movies },
+    },
   } = await axios(MOVIE_SUGGESTIONS_URL, {
     params: {
-      movie_id: id
-    }
+      movie_id: id,
+    },
   });
   return movies;
-}
+};
